@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClassesExercise", "DefiningClassesExercise\DefiningClassesExercise.csproj", "{23B105A0-88E3-405A-9A01-7760D14C2530}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClassesExercise2", "DefiningClassesExercise2\DefiningClassesExercise2.csproj", "{9D4344DA-19E8-42FD-A9F5-BA15F5B5AF38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23B105A0-88E3-405A-9A01-7760D14C2530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B105A0-88E3-405A-9A01-7760D14C2530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B105A0-88E3-405A-9A01-7760D14C2530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4344DA-19E8-42FD-A9F5-BA15F5B5AF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4344DA-19E8-42FD-A9F5-BA15F5B5AF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4344DA-19E8-42FD-A9F5-BA15F5B5AF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4344DA-19E8-42FD-A9F5-BA15F5B5AF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
