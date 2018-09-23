@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises", "Generics\Exercises.csproj", "{800CE304-B014-4F10-B2BF-FDD30352BE8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericMethodsAndInterfaces", "GenericMethodsAndInterfaces\GenericMethodsAndInterfaces.csproj", "{430D62E0-62F1-431C-A420-B058F4F43DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{800CE304-B014-4F10-B2BF-FDD30352BE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{800CE304-B014-4F10-B2BF-FDD30352BE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{800CE304-B014-4F10-B2BF-FDD30352BE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430D62E0-62F1-431C-A420-B058F4F43DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430D62E0-62F1-431C-A420-B058F4F43DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430D62E0-62F1-431C-A420-B058F4F43DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430D62E0-62F1-431C-A420-B058F4F43DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
