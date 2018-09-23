@@ -36,5 +36,17 @@ namespace Generics
             ItemHolder.Remove(item);
             return item;
         }
+
+
+        public override string ToString()
+        {
+            string str = "";
+            
+            foreach (T item in ItemHolder)
+            {
+                str += $"{item.GetType().FullName}: {item}\n";
+            }
+            return str;
+        }
     }
 }

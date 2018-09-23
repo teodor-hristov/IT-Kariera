@@ -14,7 +14,7 @@ namespace Generics
             box.Add(4);
             box.Add(5);
             Console.WriteLine(box.Remove());
-
+            Console.WriteLine(box.ToString());
         }
     }
 }
