@@ -1,18 +1,25 @@
 ﻿using System;
+using System.Collections;
 
 namespace GenericMethodsAndInterfaces
 {
     class SetUp
     {
-        static void Main()
+        public static void Main()
         {
-            string[] strings = ArrayCreator.Create(5, "Pesho");
-            int[] integers = ArrayCreator.Create(10, 33);
-            foreach (var item in strings)
+            int n = int.Parse(Console.ReadLine());
+            Box<string> boxOfStrings = new Box<string>();
+            string item;
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine(item);
+                item = Console.ReadLine();
+                boxOfStrings.Add(item);
             }
-
+            Console.WriteLine(boxOfStrings.ToString());
+            boxOfStrings.Swap("pesho","gosho");
+            Console.WriteLine(boxOfStrings.ToString());
+            
         }
+
     }
 }
