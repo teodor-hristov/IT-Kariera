@@ -6,25 +6,16 @@ namespace Exercises_04._2
     {
         static void Main()
         {
-            RandomList rndList = new RandomList();
+            StackOfStrings stack = new StackOfStrings();
 
-            rndList.Add("test1");
-            rndList.Add("test2");
-            rndList.Add("test3");
-            rndList.Add("test4");
-            rndList.Add("test5");
+            stack.Push("test1");
+            stack.Push("test2");
+            stack.Push("test3");
+            stack.Push("test4");
+            stack.Push("test5");
 
-            foreach (string item in rndList)
-            {
-                Console.WriteLine(item);
-            }
+            
 
-            Console.WriteLine("//"+rndList.RandomString());
-
-            foreach (string item in rndList)
-            {
-                Console.WriteLine(item);
-            }
         }
 
 
