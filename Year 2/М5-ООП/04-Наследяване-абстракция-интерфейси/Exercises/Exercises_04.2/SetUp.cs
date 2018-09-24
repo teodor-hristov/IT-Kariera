@@ -14,6 +14,8 @@ namespace Exercises_04._2
             stack.Push("test4");
             stack.Push("test5");
 
+           
+
             
 
         }
