@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Exercises_04._8
 {
-    interface IReal
+    interface IUnique
     {
-         bool IsFake { get; set; }
+        string Id { get; set; }
+        string Name { get; set; }
     }
 }

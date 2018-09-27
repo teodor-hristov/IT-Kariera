@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Exercises_04._8
 {
-    interface IReal
+    interface IBirthable
     {
-         bool IsFake { get; set; }
+        DateTime DateOfBirth { get; set; }
     }
 }

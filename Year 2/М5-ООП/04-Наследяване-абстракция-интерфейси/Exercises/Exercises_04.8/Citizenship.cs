@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Exercises_04._8
 {
-    abstract class Citizenship : ILiving, IPermission, IReal
+    abstract class Citizenship : IUnique, IPermission, IReal
     {
         private string id;
         private string name;
