@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Exercise_05._5.Interfaces
 {
-    interface ISeason
+    interface IExtraFuel
     {
-        double SeasonFuelConsumation { get; set; }
+        double ExtraFuelConsumation { get; set; }
     }
 }
