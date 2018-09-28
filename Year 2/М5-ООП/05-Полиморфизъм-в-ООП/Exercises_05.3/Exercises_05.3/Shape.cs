@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercises_05._3
 {
-    abstract class Shape
+    abstract class Shape : IShape
     {
         private double height;
         private double width;
