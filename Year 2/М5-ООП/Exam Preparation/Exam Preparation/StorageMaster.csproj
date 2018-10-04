@@ -6,8 +6,4 @@
     <RootNamespace>Exam_Preparation</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="vehicles\" />
-  </ItemGroup>
-
 </Project>

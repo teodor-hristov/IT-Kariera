@@ -20,7 +20,7 @@ namespace Exam_Preparation.Storage
             this.Name = name;
             this.Capacity = capacity;
             this.GarageSlots = garageSlots;
-            this.Garage = new Vehicle.Vehicle[GarageSlots];
+            this.Garage = vehicles;
         }
 
         public List<Product> Products
