@@ -14,7 +14,7 @@ namespace Exam_Preparation.Vehicle
 
         public Vehicle()
         {
-
+            Trunk = new List<Product>();
         }
 
         public Vehicle(int capacity)
@@ -23,31 +23,9 @@ namespace Exam_Preparation.Vehicle
             this.Capacity = capacity;
         }
 
-        public bool IsEmpty
-        {
-            get
-            {
-                if (trunk.Count != 0)
-                {
-                    this.isEmpty = false;
-                }
-                return isEmpty;
-            }
-            set { isEmpty = value; }
-        }
+        public bool IsEmpty => this.Trunk.Count == 0;
 
-        public bool IsFull
-        {
-            get
-            {
-                if (trunk.Count == this.capacity)
-                {
-                    this.isFull = true;
-                }
-                return isFull;
-            }
-            set { isFull = value; }
-        }
+        public bool IsFull => this.Trunk.Sum(p => p.Weight) >= this.Capacity;
 
 
 
@@ -62,8 +40,6 @@ namespace Exam_Preparation.Vehicle
             get { return capacity; }
             set { capacity = value; }
         }
-
-
 
         public void LoadProduct(Product product)
         {

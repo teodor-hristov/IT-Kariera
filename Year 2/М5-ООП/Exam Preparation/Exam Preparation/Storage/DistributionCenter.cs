@@ -7,10 +7,12 @@ namespace Exam_Preparation.Storage
 {
     class DistributionCenter : Storage
     {
-        public DistributionCenter(string name)
-             : base(name, 2, 5, new Van(), new Van(), new Van())
-        {
+        private const int DefaultCapacity = 2;
+        private const int DefaultGarageSlots = 5;
 
+        public DistributionCenter(string name)
+            : base(name, DefaultCapacity, DefaultGarageSlots, new List<Vehicle.Vehicle>() { new Van(), new Van(), new Van() })
+        {
         }
     }
 }

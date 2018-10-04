@@ -70,6 +70,7 @@ namespace Exam_Preparation
             }
             return result.Trim();
         }
+
         public string SelectVehicle(string storageName, int garageSlot)
         {
             string result = String.Empty;
@@ -88,6 +89,7 @@ namespace Exam_Preparation
             }
             return result;
         }
+
         public string LoadVehicle(IEnumerable<string> products)
         {
             string result = string.Empty;
@@ -161,18 +163,56 @@ namespace Exam_Preparation
             return result;
 
         }
+
         public string GetStorageStatus(string storageName)
         {
-            string result = string.Empty;
-            try
+            StringBuilder sb = new StringBuilder();
+            Storage.Storage storage = null;
+
+            foreach (var item in storages)
             {
-                result = storages[storageName].ToString();
+                if(item.Key == storageName)
+                {
+                    storage = item.Value;
+                    break;
+                }
             }
-            catch (Exception e)
+
+            double allProductsWeight = storage.Products.Sum(p => p.Weight);
+            var sortedProducts = storage
+                .Products
+                .GroupBy(c => c.GetType().Name)
+                .Select(g => new
+                {
+                    Name = g.Key,
+                    Count = g.Count()
+                })
+                .ToList();
+
+            List<string> sortedProductsToString = new List<string>();
+            foreach (var product in sortedProducts.OrderByDescending(p => p.Count).ThenBy(p => p.Name))
             {
-                result = e.Message;
+                sortedProductsToString.Add($"{product.Name} ({product.Count})");
             }
-            return result.Trim();
+
+            sb.AppendLine(string.Format("Stock ({0}/{1}): [{2}]", allProductsWeight, storage.Capacity, string.Join(", ", sortedProductsToString)));
+
+            List<string> vehicleInGarage = new List<string>();
+            foreach (Vehicle.Vehicle vehicl in storage.Garage)
+            {
+                if (vehicl == null)
+                {
+                    vehicleInGarage.Add("empty");
+                }
+                else
+                {
+                    vehicleInGarage.Add(vehicl.GetType().Name);
+                }
+            }
+
+            sb.AppendLine(string.Format("Garage: [{0}]", string.Join("|", vehicleInGarage)));
+            return sb.ToString().Trim();
+
 
         }
         public string GetSummary()
