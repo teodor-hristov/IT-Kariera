@@ -12,15 +12,15 @@ namespace Exam_Preparation.Storage
         private int capacity;
         private int garageSlots;
         private bool isFull;
-        private List<Vehicle.Vehicle> garage;
+        private Vehicle.Vehicle[] garage;
         private List<Product> products;
-
-        public Storage(string name, int capacity, int garageSlots, IEnumerable<Vehicle.Vehicle> vehicles)
+        
+        public Storage(string name, int capacity, int garageSlots,params Vehicle.Vehicle[] vehicles)
         {
             this.Name = name;
             this.Capacity = capacity;
             this.GarageSlots = garageSlots;
-            this.Garage = new List<Vehicle.Vehicle>(GarageSlots);
+            this.Garage = new Vehicle.Vehicle[GarageSlots];
         }
 
         public List<Product> Products
@@ -29,7 +29,7 @@ namespace Exam_Preparation.Storage
             set { products = value; }
         }
 
-        public List<Vehicle.Vehicle> Garage
+        public Vehicle.Vehicle[] Garage
         {
             get { return garage; }
             set { garage = value; }
@@ -39,7 +39,7 @@ namespace Exam_Preparation.Storage
         {
             get
             {
-                if(this.Garage.Count == this.GarageSlots)
+                if (this.Garage.Length == this.GarageSlots)
                 {
                     isFull = true;
                 }
@@ -86,5 +86,44 @@ namespace Exam_Preparation.Storage
                 return this.Garage[garageSlot];
             }
         }
+
+        public int SendVehicleTo(int garageSlot, Storage deliveryLocation)
+        {
+            Vehicle.Vehicle vehicle = this.GetVehicle(garageSlot);
+            if (this.IsFull == false)
+            {
+                for (int i = 0; i < deliveryLocation.Garage.Length; i++)
+                {
+                    if (deliveryLocation.Garage[i] == null)
+                    {
+
+                        deliveryLocation.Garage[i] = vehicle;
+                        deliveryLocation.GarageSlots--;
+                        this.Garage[garageSlot] = null;
+                        this.GarageSlots++;
+                        return i;
+                    }
+                }
+            }
+
+            throw new InvalidOperationException("No room in garage!");
+
+        }
+        public int UnloadVehicle(int garageSlot)
+        {
+            if (this.GarageSlots >= garageSlot) throw new InvalidOperationException("Storage is full!");
+            else
+            {
+                int brProducts = 0;
+                while (GetVehicle(garageSlot).IsEmpty != false)
+                {
+                    this.Products.Add(GetVehicle(garageSlot).Unload());
+                    brProducts++;
+                }
+                return brProducts;
+            }
+        }
+
     }
 }
+

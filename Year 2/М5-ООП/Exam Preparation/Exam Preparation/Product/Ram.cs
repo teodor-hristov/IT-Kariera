@@ -6,7 +6,7 @@ namespace Exam_Preparation
 {
     class Ram : Product
     {
-        public Ram(double price, double weight)
+        public Ram(double price)
             : base(price)
         {
             this.Weight = 0.1;

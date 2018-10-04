@@ -6,7 +6,7 @@ namespace Exam_Preparation
 {
     class Gpu : Product
     {
-        public Gpu(double price, double weight)
+        public Gpu(double price)
            : base(price)
         {
             this.Weight = 0.7;
