@@ -47,3 +47,13 @@ plusn n (x:xs) = x + n : plusn n xs
 make :: (Int -> Int) -> [Int] -> [Int]
 make func [] = []
 make func (x:xs) = (func x) : make func xs
+
+insert :: Int -> [Int] -> [Int]
+insert n [] = [n]
+insert n (y:ys) 
+            | n <= y = n:(y:ys)
+            | otherwise = y : insert n ys
+
+insertSort :: [Int] -> [Int]
+insertSort [] = []
+insertSort (x:xs) = insert x (insertSort xs)
