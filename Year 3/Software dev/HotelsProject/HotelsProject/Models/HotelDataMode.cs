@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication2.Models
+namespace HotelsProject.Models
 {
-    public class HotelDataModel
+    public class HotelDataMode
     {
         [Key]
-        public String Id { get; set; }
-        public String Name { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
         public int Stars { get; set; }
         public int Floors { get; set; }
         public int Rooms { get; set; }

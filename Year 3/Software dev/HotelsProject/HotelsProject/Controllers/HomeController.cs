@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApplication2.Models;
+using HotelsProject.Models;
 
-namespace WebApplication2.Controllers
+namespace HotelsProject.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,8 +20,6 @@ namespace WebApplication2.Controllers
 
         public IActionResult Index()
         {
-            HotelDataModel hotel = new HotelDataModel();
-            //hotel.Id = Guid.NewGuid().ToString();
             return View();
         }
 

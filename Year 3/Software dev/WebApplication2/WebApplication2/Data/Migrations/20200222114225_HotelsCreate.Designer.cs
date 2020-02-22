@@ -10,7 +10,7 @@ using WebApplication2.Data;
 namespace WebApplication2.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200222111945_HotelsCreate")]
+    [Migration("20200222114225_HotelsCreate")]
     partial class HotelsCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -223,10 +223,8 @@ namespace WebApplication2.Data.Migrations
 
             modelBuilder.Entity("WebApplication2.Models.HotelDataModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Floors")
                         .HasColumnType("int");
