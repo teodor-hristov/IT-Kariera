@@ -1,0 +1,2 @@
+Add-Migration HotelsCreate //syzdavame migraciq HotelsCreate
+Update-Database //update-vame bazata danni
