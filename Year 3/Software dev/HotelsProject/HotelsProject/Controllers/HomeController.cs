@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using HotelsProject.Models;
+using HotelsProject.Data;
 
 namespace HotelsProject.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        protected ApplicationDbContext context;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,6 +22,13 @@ namespace HotelsProject.Controllers
 
         public IActionResult Index()
         {
+            HotelDataModel hotel = new HotelDataModel();
+            hotel.Id = Guid.NewGuid().ToString();
+            hotel.Name = "Test name";
+            hotel.Floors = 10;
+            hotel.Rooms = 100;
+            hotel.Stars = 5;
+            
             return View();
         }
 

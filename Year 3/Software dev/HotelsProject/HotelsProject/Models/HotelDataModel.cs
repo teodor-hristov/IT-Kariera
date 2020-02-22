@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelsProject.Models
 {
-    public class HotelDataMode
+    public class HotelDataModel
     {
         [Key]
         public string Id { get; set; }
