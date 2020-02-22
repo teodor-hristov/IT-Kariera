@@ -12,5 +12,6 @@ namespace WebApplication2.Data
             : base(options)
         {
         }
+
     }
 }
