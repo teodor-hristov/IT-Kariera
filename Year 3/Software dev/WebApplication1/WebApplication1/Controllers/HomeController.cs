@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Data;
@@ -31,13 +32,15 @@ namespace WebApplication1.Controllers
             //hotel.Rooms = 300;
 
             //_context.Hotels.Add(hotel);
-            //_context.SaveChanges();
+            //_context.SaveChanges
 
             return View();
         }
-
+        [Authorize(Roles = "Administration, Admin")]
         public IActionResult Privacy()
         {
+            var data = _context.Hotels.Where(h => h.Rooms > 10).ToList();
+            ViewBag.Hotels = data;
             return View();
         }
 

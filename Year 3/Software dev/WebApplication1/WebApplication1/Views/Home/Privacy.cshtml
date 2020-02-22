@@ -2,5 +2,15 @@
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
+@foreach (var hotel in ViewBag.Hotels)
+{
+    <ul>
+        <li>@hotel.Name</li>
+        <li>@hotel.Floors</li>
+        <li>@hotel.Rooms</li>
+        <li>@hotel.Stars</li>
+    </ul>
+}
+
 
 <p>Use this page to detail your site's privacy policy.</p>
