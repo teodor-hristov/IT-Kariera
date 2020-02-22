@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HotelsProject.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Models;
 
-namespace HotelsProject.Data
+namespace WebApplication1.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -14,6 +14,6 @@ namespace HotelsProject.Data
         {
         }
 
-        public DbSet<HotelDataModel> Hotels { get; set; }
+        public DbSet<HotelsDataModel> Hotels { get; set; }
     }
 }
