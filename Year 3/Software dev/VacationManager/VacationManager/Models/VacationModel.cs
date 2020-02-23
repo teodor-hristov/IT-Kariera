@@ -14,7 +14,7 @@ namespace VacationManager.Models
     •	одобрена (вярно или невярно)
     •	заявител
      */
-    public class Vacation
+    public class VacationModel
     {
         [Key]
         public String Id { get; set; }
@@ -23,6 +23,6 @@ namespace VacationManager.Models
         public DateTime TimeStamp { get; set; }
         public Boolean HalfDayVacation { get; set; }
         public Boolean Agreed { get; set; }
-        public User Declarator { get; set; }
+        public UserModel Declarator { get; set; }
     }
 }

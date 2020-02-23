@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace VacationManager.Models
 {
 
-    public class User
+    public class UserModel
     {
         [Key]
         public String Id { get; set; }
@@ -15,6 +15,6 @@ namespace VacationManager.Models
         public String Name { get; set; }
         public String Surname { get; set; }
         public String Role { get; set; }
-        public Team Team { get; set; }
+        public TeamModel Team { get; set; }
     }
 }

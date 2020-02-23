@@ -12,5 +12,6 @@ namespace VacationManager.Data
             : base(options)
         {
         }
+        public DbContext<User>
     }
 }

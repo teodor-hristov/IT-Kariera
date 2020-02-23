@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace VacationManager.Models
 {
-    public class Project
+    public class ProjectModel
     {
         [Key]
         public String Id { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
-        public List<Team> Teams { get; set; }
+        public List<TeamModel> Teams { get; set; }
     }
 }
