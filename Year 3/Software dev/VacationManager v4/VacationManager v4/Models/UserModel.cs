@@ -10,11 +10,11 @@ namespace VacationManager_v4.Models
     public class UserModel
     {
         [Key]
-        public String Id { get; set; }
-        public String Name { get; set; }
-        public String Surname { get; set; }
-        public String Role { get; set; }
-        public String Password { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Role { get; set; }
+        public string Password { get; set; }
         public TeamModel Team { get; set; }
     }
 }
