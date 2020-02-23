@@ -13,7 +13,7 @@ namespace VacationManager.Data
             : base(options)
         {
         }
-        public DbSet<UserModel> Users { get; set; }
+        //public DbSet<UserModel> Users { get; set; }
         public DbSet<TeamModel> Teams { get; set; }
         public DbSet<ProjectModel> Projects { get; set; }
         public DbSet<VacationModel> Vacations { get; set; }
