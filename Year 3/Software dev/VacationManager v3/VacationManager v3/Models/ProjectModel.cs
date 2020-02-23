@@ -4,15 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VacationManager.Models
+namespace VacationManager_v3.Models
 {
-    public class TeamModel
+    public class ProjectModel
     {
         [Key]
         public String Id { get; set; }
         public String Name { get; set; }
-        public ProjectModel Project { get; set; }
-        public List<UserModel> Developers { get; set; }
-        public UserModel TeamLeader { get; set; }
+        public String Description { get; set; }
+        public List<TeamModel> Teams { get; set; }
     }
 }
